@@ -132,12 +132,87 @@ footer p {
 }
 
 /* -------  Media Query ------- */
-@media all and (min-width:480px){
+@media all and (min-width: 480px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
 
-  img { 
-    width: 100%; 
-    height: 300px; 
-    object-fit: cover; 
-    object-position: bottom; 
+  form {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  form label {
+    display: flex;
+    padding-right: 10px;
+  }
+
+  form > div {
+    display: inline-flex;
+    justify-content: space-between;
+  }
+
+  form button {
+    width: auto;
+    display: inline-flex;
+    justify-content: flex-end;
+    margin-left: 50px;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+
+  button p {
+    font-size: 18px;
+  }
+
+  .criteria {
+    flex-direction: column;
+  }
+
+  top .row {
+    display: flex;
+  }
+
+  .col {
+    padding-top: 20px;
+    padding-bottom: 0px;
+  }
+
+  .column {
+    flex: 33.33%;
+    margin: auto 0;
+    margin-left: 15px;
+    font-size: small;
+    align-items: center;
+  }
+
+  .area-single {
+    display: flex;
+    flex: 25%;
+  }
+
+  .area-double {
+    display: flex;
+    flex: 50%;
+  }
+
+  #ideas .row {
+    display: flex;
+  }
+
+  .size-image {
+    display: flex;
+    flex: 50%;
+  }
+
+  .size-text {
+    display: flex;
+    flex: 50%;
+  }
+
+  .centered h2 {
+    display: flex;
+    justify-content: center;
   }
 };
