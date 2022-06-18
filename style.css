@@ -2,7 +2,6 @@
 
 body {
   font-family: "Lato", sans-serif;
-  
 }
 
 h2 {
@@ -20,10 +19,6 @@ h3 {
 p {
   line-height: 1.5em;
   margin: 0;
-}
-
-img{
-  width:100%;
 }
 
 section {
@@ -59,45 +54,54 @@ main img {
 
 header {
   background-color: #ff385c;
-  padding: 20px 20px 0 20px;
+  padding: 20px 20px 5px 20px;
   text-align: center;
 }
 
 .logo {
   font-family: "Pangolin", cursive;
-  font-size: 72px;
+  font-size: 45px;
   color: #fff;
 }
 
-header nav ul{
-  display:flex;
-  justify-content:center;
-  padding-bottom: 10px;
+ul{
+  padding-inline-start: 0;
 }
 
 header nav ul li {
   list-style-type: none;
-  padding: 5px;
 }
 
 header nav ul li a {
   color: #fff;
   text-decoration: none;
-  
-
+  padding: 0 10px 0 10px;
 }
 
 header nav ul li a:hover {
   color: #bdbdbd;
   text-decoration: none;
 }
-#about p {
-  flex-grow:2;
+
+header div{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
+
 /* -------  Search Form ------- */
 form {
+  font-size: 20px;
   border: 2px solid #ff385c;
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+form div{
+  display: flex;
+  justify-content: space-between;
+  margin: 11px;
 }
 
 form label {
@@ -107,7 +111,7 @@ form label {
 form select,
 form input {
   margin-bottom: 20px;
-  width: 180px;
+  width: 160px;
 }
 
 form button {
@@ -117,6 +121,12 @@ form button {
   font-size: 24px;
   padding: 15px;
   width: 100%;
+}
+
+/* -------  Host ------- */
+
+section ul{
+  padding-left: 40px;
 }
 
 /* -------  Footer ------- */
@@ -132,87 +142,71 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+
 @media all and (min-width: 480px) {
   header {
     display: flex;
     justify-content: space-between;
+    padding: 10px 30px 0;
   }
 
-  form {
+  ul{
+    padding-top: 8px;
+  }
+
+  form{
+    display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
+    margin: 5px;
   }
 
-  form label {
+  form input, form select{
+    margin-bottom: 0;
+  }
+
+  form label{
+    padding-right: 5px;
+  }
+
+  form div{
+    flex: 1;
+    margin: 10px;
+    width: 100%;
+    justify-content: none;
+  }
+  
+  .about{
     display: flex;
-    padding-right: 10px;
+    flex-direction: row;
   }
 
-  form > div {
-    display: inline-flex;
-    justify-content: space-between;
+  .about-split{
+    flex-direction: row;
+    flex: 1;
+    padding: 10px;
   }
 
-  form button {
-    width: auto;
-    display: inline-flex;
-    justify-content: flex-end;
-    margin-left: 50px;
-    font-size: 16px;
-    margin-top: 10px;
+  .about-split-p{
+    flex: 2;
+    align-self: center;
+    font-weight: normal;
+  }
+  
+  .about-p{
+    font-size: 15px;
   }
 
-  button p {
-    font-size: 18px;
-  }
-
-  .criteria {
+  .ideas-img{
+    flex: 1;
     flex-direction: column;
+    padding: 5px;
+    font-size: 15px;
   }
 
-  top .row {
-    display: flex;
+  .host-text{
+    padding-top: 50px;
   }
-
-  .col {
-    padding-top: 20px;
-    padding-bottom: 0px;
-  }
-
-  .column {
-    flex: 33.33%;
-    margin: auto 0;
-    margin-left: 15px;
-    font-size: small;
-    align-items: center;
-  }
-
-  .area-single {
-    display: flex;
-    flex: 25%;
-  }
-
-  .area-double {
-    display: flex;
-    flex: 50%;
-  }
-
-  #ideas .row {
-    display: flex;
-  }
-
-  .size-image {
-    display: flex;
-    flex: 50%;
-  }
-
-  .size-text {
-    display: flex;
-    flex: 50%;
-  }
-
-  .centered h2 {
-    display: flex;
-    justify-content: center;
-  }
-};
+  
+}
