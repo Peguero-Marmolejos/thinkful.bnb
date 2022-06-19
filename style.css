@@ -154,28 +154,26 @@ footer p {
     padding-top: 8px;
   }
 
-  form{
+  form {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     margin: 5px;
   }
 
-  form input, form select{
-    margin-bottom: 0;
+  form div{
+    margin-bottom: 2px;
+    flex-direction: column;
+    margin: 10px;
+    width: 100%;
+    
   }
 
   form label{
     padding-right: 5px;
   }
 
-  form div{
-    flex: 1;
-    margin: 10px;
-    width: 100%;
-    justify-content: none;
-  }
+  
   
   .about{
     display: flex;
